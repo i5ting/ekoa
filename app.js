@@ -11,13 +11,10 @@ app.em(function(req, res, next){
 })
 
 // log2
-app.em(function(req, res, next){
-  console.log('start')
-  
-  return next().then(function (){
-    console.log('end')
-  })
-})
+// app.em(function(req){
+//   console.log('start')
+// 
+// })
 
 app.em(function(req, res, next){
   console.log('process')
