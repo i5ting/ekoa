@@ -1,7 +1,7 @@
 {
-  "name": "hm",
+  "name": "ekoa",
   "version": "1.0.0",
-  "description": "http middlewares",
+  "description": "koa 2.x use middlewares",
   "main": "index.js",
   "scripts": {
     "test": "ava -v"
@@ -19,10 +19,9 @@
   "homepage": "https://github.com/i5ting/hm#readme",
   "devDependencies": {
     "ava": "^0.16.0",
-    "koa": "^2.0.0",
     "superkoa": "^1.0.2"
   },
   "dependencies": {
-
+    "koa": "^2.0.0"
   }
 }

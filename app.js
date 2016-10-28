@@ -1,18 +1,17 @@
 const Koa = require('.')
 const app = new Koa()
 
-// var hm = require('.')
+app.hm(function(req, res, next){
+  console.log('start')
+  
+  return next().then(function (){
+    console.log('end')
+  })
+})
 
 app.hm(function(req, res, next){
   console.log('start')
   res.body = "sss";
-
-  // return next().then(function (){
-  //   console.log('end')
-
-    
-  // })
-  
 })
 
 // response
