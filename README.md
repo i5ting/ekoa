@@ -2,10 +2,10 @@
 
 koa 2.x use express-style middlewares 
 
-[![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/i5ting/hm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![NPM version](https://img.shields.io/npm/v/hm.svg?style=flat-square)](https://www.npmjs.com/package/hm)
-[![Build](https://travis-ci.org/i5ting/hm.svg?branch=master)](https://travis-ci.org/i5ting/hm)
-[![codecov.io](https://codecov.io/github/i5ting/hm/coverage.svg?branch=master)](https://codecov.io/github/i5ting/hm?branch=master)
+[![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/i5ting/ekoa?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![NPM version](https://img.shields.io/npm/v/ekoa.svg?style=flat-square)](https://www.npmjs.com/package/ekoa)
+[![Build](https://travis-ci.org/i5ting/ekoa.svg?branch=master)](https://travis-ci.org/i5ting/ekoa)
+[![codecov.io](https://codecov.io/github/i5ting/ekoa/coverage.svg?branch=master)](https://codecov.io/github/i5ting/ekoa?branch=master)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 ## Install
