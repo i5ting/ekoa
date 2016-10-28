@@ -4,7 +4,9 @@
   "description": "koa 2.x use express-style middlewares",
   "main": "index.js",
   "scripts": {
-    "test": "ava -v"
+    "test": "./node_modules/.bin/nyc ./node_modules/.bin/ava -v",
+    "report-coverage": "./node_modules/.bin/nyc report --reporter=lcov > coverage.lcov && codecov",
+    "standard": "./node_modules/.bin/standard index.js"
   },
   "repository": {
     "type": "git",
@@ -25,9 +27,18 @@
   "homepage": "https://github.com/i5ting/hm#readme",
   "devDependencies": {
     "ava": "^0.16.0",
-    "superkoa": "^1.0.2"
+    "superkoa": "^1.0.2",
+    "codecov": "^1.0.1",
+    "ghooks": "^1.2.4",
+    "nyc": "^7.0.0",
+    "standard": "^7.1.2"
   },
   "dependencies": {
     "koa": "^2.0.0"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run standard"
+    }
   }
 }
