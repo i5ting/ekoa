@@ -1,6 +1,7 @@
 const Koa = require('.')
 const app = new Koa()
 
+// log1
 app.em(function(req, res, next){
   const start = new Date();
   return next().then(() => {
@@ -9,6 +10,7 @@ app.em(function(req, res, next){
   });
 })
 
+// log2
 app.em(function(req, res, next){
   console.log('start')
   
@@ -26,7 +28,5 @@ app.em(function(req, res, next){
 app.use(ctx => {
   ctx.body = 'Hello Koa'
 })
-
-module.exports = app
 
 app.listen(4000)
