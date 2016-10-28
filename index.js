@@ -25,7 +25,7 @@ module.exports = class EKoa extends Koa {
 
     let app = this
 
-    this.em = this.hm = (fn) => {
+    this.em = this.expressmiddleware = (fn) => {
       if (fn.length <= 3) {
         return app.use((ctx, next) => {
           var req = ctx.req

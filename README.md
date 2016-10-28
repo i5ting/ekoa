@@ -10,8 +10,8 @@ koa 2.x use express-style middlewares
 
 ## Features
 
-- app.em 支持Express风格的中间件
-- app.use依然可以使用Koa 2.x的三种中间件
+- `app.em` = `app.expressmiddleware` 支持Express风格的中间件
+- `app.use` 依然可以使用Koa 2.x的三种中间件
 
 ## Install
 
@@ -56,7 +56,7 @@ app.listen(4000)
 
 ## 可使用的express风格的中间件
 
-> app.em = app.hm
+> app.em = app.expressmiddleware
 
 ### 正常写法
 
