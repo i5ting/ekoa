@@ -17,7 +17,7 @@ $ npm i -S ekoa
 ## Usages
 
 ```
-const Koa = require('.')
+const Koa = require('ekoa')
 const app = new Koa()
 
 app.em(function(req, res, next){
