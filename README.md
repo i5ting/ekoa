@@ -1,6 +1,6 @@
 # ekoa
 
-koa 2.x use express-style middlewares
+koa 2.x use express-style middlewares 
 
 [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/i5ting/hm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![NPM version](https://img.shields.io/npm/v/hm.svg?style=flat-square)](https://www.npmjs.com/package/hm)
