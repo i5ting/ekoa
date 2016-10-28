@@ -10,8 +10,8 @@ koa 2.x use express-style middlewares
 
 ## Features
 
-- `app.em` = `app.expressmiddleware` 支持Express风格的中间件
-- `app.use` 依然可以使用Koa 2.x的三种中间件
+- `app.use` = `app.em` = `app.expressmiddleware` 支持Express风格的中间件
+- `app._use` 依然可以使用Koa 2.x的三种中间件
 
 ## Install
 
@@ -25,7 +25,8 @@ $ npm i -S ekoa
 const Koa = require('ekoa')
 const app = new Koa()
 
-app.em(function(req, res, next){
+// log1
+app.use(function(req, res, next){
   const start = new Date();
   return next().then(() => {
     const ms = new Date() - start;
@@ -33,25 +34,23 @@ app.em(function(req, res, next){
   });
 })
 
+// log2
 app.em(function(req, res, next){
   console.log('start')
-  
-  return next().then(function (){
-    console.log('end')
-  })
+  next()
 })
 
-app.em(function(req, res, next){
+app.use(function(req, res, next){
   console.log('process')
-  res.body = "sss";
+  res.body = "Hello Koa 1";
 })
 
 // response
-app.use(ctx => {
-  ctx.body = 'Hello Koa'
+app._use(ctx => {
+  ctx.body = 'Hello Koa 2'
 })
 
-app.listen(4000)
+app.run(4000)
 ```
 
 ## 可使用的express风格的中间件
@@ -71,6 +70,16 @@ function(req, res, next){
 ```
 
 next和koa commonfunction中的next是一样的。
+
+更简单的写法
+
+```
+app.use(function(req, res, next){
+  console.log('start')
+  next()
+})
+
+```
 
 ### 中间件正常写法
 
