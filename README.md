@@ -40,8 +40,6 @@ app.use(ctx => {
   ctx.body = 'Hello Koa'
 })
 
-module.exports = app
-
 app.listen(4000)
 ```
 
