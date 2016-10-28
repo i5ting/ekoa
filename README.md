@@ -8,6 +8,11 @@ koa 2.x use express-style middlewares
 [![codecov.io](https://codecov.io/github/i5ting/ekoa/coverage.svg?branch=master)](https://codecov.io/github/i5ting/ekoa?branch=master)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
+## Features
+
+- app.em = app.hm 支持Express风格的中间件
+- app.use依然可以使用Koa 2.x的三种中间件
+
 ## Install
 
 ```
