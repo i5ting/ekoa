@@ -1,0 +1,28 @@
+{
+  "name": "hm",
+  "version": "1.0.0",
+  "description": "http middlewares",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i5ting/hm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i5ting/hm/issues"
+  },
+  "homepage": "https://github.com/i5ting/hm#readme",
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "koa": "^2.0.0",
+    "superkoa": "^1.0.2"
+  },
+  "dependencies": {
+
+  }
+}
