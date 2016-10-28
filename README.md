@@ -1,4 +1,4 @@
-# ekoa
+# ekoa：我想把Koa 2.x写的跟express一样
 
 koa 2.x use express-style middlewares 
 
