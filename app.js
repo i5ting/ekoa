@@ -10,7 +10,7 @@ app.hm(function(req, res, next){
 })
 
 app.hm(function(req, res, next){
-  console.log('start')
+  console.log('process')
   res.body = "sss";
 })
 
