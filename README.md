@@ -49,6 +49,34 @@ app.use(ctx => {
 app.listen(4000)
 ```
 
+## 可使用的express风格的中间件
+
+> app.em = app.hm
+
+### 正常写法
+
+```
+function(req, res, next){
+  console.log('start')
+  
+  return next().then(function (){
+    console.log('end')
+  })
+}
+```
+
+next和koa commonfunction中的next是一样的。
+
+### 中间件正常写法
+
+```
+function(req, res){
+  res.body = "xxx"
+}
+``` 
+
+此种写法有先后顺序，没有next中间件就不会向下传递。
+
 ## Contributing
 
 1. Fork it
