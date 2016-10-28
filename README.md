@@ -14,7 +14,7 @@ $ npm i -S ekoa
 const Koa = require('.')
 const app = new Koa()
 
-app.hm(function(req, res, next){
+app.em(function(req, res, next){
   const start = new Date();
   return next().then(() => {
     const ms = new Date() - start;
@@ -22,7 +22,7 @@ app.hm(function(req, res, next){
   });
 })
 
-app.hm(function(req, res, next){
+app.em(function(req, res, next){
   console.log('start')
   
   return next().then(function (){
@@ -30,7 +30,7 @@ app.hm(function(req, res, next){
   })
 })
 
-app.hm(function(req, res, next){
+app.em(function(req, res, next){
   console.log('process')
   res.body = "sss";
 })
