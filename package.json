@@ -1,7 +1,7 @@
 {
   "name": "ekoa",
   "version": "1.0.1",
-  "description": "koa 2.x use middlewares",
+  "description": "koa 2.x use express-style middlewares",
   "main": "index.js",
   "scripts": {
     "test": "ava -v"
@@ -10,9 +10,15 @@
     "type": "git",
     "url": "git+https://github.com/i5ting/hm.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "koa",
+    "express",
+    "middleware",
+    "http",
+    "koa2"
+  ],
+  "author": "i5ting",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/i5ting/hm/issues"
   },
