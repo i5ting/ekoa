@@ -2,6 +2,14 @@ const Koa = require('.')
 const app = new Koa()
 
 app.hm(function(req, res, next){
+  const start = new Date();
+  return next().then(() => {
+    const ms = new Date() - start;
+    console.log(`${req.method} ${req.url} - ${ms}ms`);
+  });
+})
+
+app.hm(function(req, res, next){
   console.log('start')
   
   return next().then(function (){
