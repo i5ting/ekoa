@@ -1,9 +1,9 @@
-const Koa = require('koa')
+const Koa = require('.')
 const app = new Koa()
 
-var hm = require('.')
+// var hm = require('.')
 
-app.use(hm(function(req, res, next){
+app.hm(function(req, res, next){
   console.log('start')
   res.body = "sss";
 
@@ -13,7 +13,7 @@ app.use(hm(function(req, res, next){
     
   // })
   
-}))
+})
 
 // response
 app.use(ctx => {
