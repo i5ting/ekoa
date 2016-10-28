@@ -34,11 +34,13 @@ module.exports = class EKoa extends Koa {
   
           fn.call(this, req, res, next)
         })
+      } else if (fn.length == 2) {
+        return app.use((ctx, next) => {
+          fn.apply(this, arguments) 
+        })
+      } else {
+        throw new new TypeError('You may only use express-style middleware or koa 2.x middleware!')
       }
-  
-      return app.use((ctx, next) => {
-        fn.apply(this, arguments) 
-      })
     }
   } 
 }
