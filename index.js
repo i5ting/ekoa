@@ -5,8 +5,6 @@
  * Module dependencies.
  */
 
-
-
 const Koa = require('koa')
 
 
@@ -15,7 +13,7 @@ const Koa = require('koa')
  * Inherits from `Emitter.prototype`.
  */
 
-module.exports = class MyKoa extends Koa {
+module.exports = class EKoa extends Koa {
 
   /**
    * Initialize a new `Application`.
