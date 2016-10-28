@@ -35,7 +35,7 @@ app.use(function(req, res, next){
 })
 
 // log2
-app.em(function(req, res, next){
+app.use(function(req, res, next){
   console.log('start')
   next()
 })
