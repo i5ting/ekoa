@@ -11,7 +11,7 @@ test.cb("superkoa()", t => {
     .expect(200, function (err, res) {
       t.ifError(err)
       var userId = res.body.id;
-      t.is(res.text, 'Hello Koa', 'res.text == Hello Koa')
+      t.is(res.text, 'Hello Koa 1', 'res.text == Hello Koa 1')
       t.end()
     });
 });

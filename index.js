@@ -23,11 +23,15 @@ module.exports = class EKoa extends Koa {
   constructor () {
     super()
 
+    this.run = this.start = this.listen
+
+    this._use = this.use
+
     let app = this
 
-    this.em = this.expressmiddleware = (fn) => {
+    this.use = this.em = this.expressmiddleware = (fn) => {
       if (fn.length <= 3) {
-        return app.use((ctx, next) => {
+        return app._use((ctx, next) => {
           var req = ctx.req
           var res = ctx.response
 

@@ -2,7 +2,7 @@ const Koa = require('.')
 const app = new Koa()
 
 // log1
-app.em(function(req, res, next){
+app.use(function(req, res, next){
   const start = new Date();
   return next().then(() => {
     const ms = new Date() - start;
@@ -11,19 +11,21 @@ app.em(function(req, res, next){
 })
 
 // log2
-// app.em(function(req){
-//   console.log('start')
-// 
-// })
-
 app.em(function(req, res, next){
+  console.log('start')
+  next()
+})
+
+app.use(function(req, res, next){
   console.log('process')
-  res.body = "Hello Koa";
+  res.body = "Hello Koa 1";
 })
 
 // response
-app.use(ctx => {
-  ctx.body = 'Hello Koa'
+app._use(ctx => {
+  ctx.body = 'Hello Koa 2'
 })
 
 module.exports = app
+
+app.run(4000)
