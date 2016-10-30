@@ -21,6 +21,8 @@ $ npm i -S ekoa
 
 ## Usages
 
+最常见的用法
+
 ```
 const Koa = require('ekoa')
 const app = new Koa()
@@ -52,6 +54,43 @@ app._use(ctx => {
 
 app.run(4000)
 ```
+
+支持async函数
+
+```
+const Koa = require('.')
+const app = new Koa('sss',{})
+
+// log1
+app.use(async function(req, res, next){
+  const start = new Date();
+  await next()
+  
+  const ms = new Date() - start;
+  console.log(`${req.method} ${req.url} - ${ms}ms`);
+})
+
+// log2
+app.use(async function(req, res, next){
+  console.log('start')
+  await next()
+})
+
+app.use(function(req, res, next){
+  console.log('process')
+  res.body = "Hello Koa 1";
+})
+
+// response
+app._use(ctx => {
+  ctx.body = 'Hello Koa 2'
+})
+
+app.run(4000)
+
+```
+
+通过runkoa执行即可（或babel，或者node 7+）
 
 ## 可使用的express风格的中间件
 

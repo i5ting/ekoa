@@ -20,11 +20,10 @@ module.exports = class EKoa extends Koa {
    * @api public
    */
 
-  constructor () {
+  constructor (options) {
     super()
 
     this.run = this.start = this.listen
-
     this._use = this.use
 
     let app = this

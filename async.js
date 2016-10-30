@@ -2,18 +2,18 @@ const Koa = require('.')
 const app = new Koa('sss',{})
 
 // log1
-app.use(function(req, res, next){
+app.use(async function(req, res, next){
   const start = new Date();
-  return next().then(() => {
-    const ms = new Date() - start;
-    console.log(`${req.method} ${req.url} - ${ms}ms`);
-  });
+  await next()
+  
+  const ms = new Date() - start;
+  console.log(`${req.method} ${req.url} - ${ms}ms`);
 })
 
 // log2
-app.use(function(req, res, next){
+app.use(async function(req, res, next){
   console.log('start')
-  next()
+  await next()
 })
 
 app.use(function(req, res, next){
