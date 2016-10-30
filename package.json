@@ -1,6 +1,6 @@
 {
   "name": "ekoa",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "koa 2.x use express-style middlewares",
   "main": "index.js",
   "scripts": {
